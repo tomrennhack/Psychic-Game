@@ -10,10 +10,20 @@ var lettersGuessed = [];
 // set our HTML facing variables
 var gameTitle = document.getElementById("game-title");
 var gameInstructions = document.getElementById("game-instructions");
+var pressAnyKey = document.getElementById("press-any-key");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesText = document.getElementById("guesses-text");
 var lettersText = document.getElementById("letters-text");
+
+// set default values for HTML
+gameTitle.textContent = "The Psychic Game";
+gameInstructions.textContent = "Guess what letter I'm thinking of (and don't check the console!)";
+pressAnyKey.textContent = "Press any key to begin.";
+winsText.textContent = "Wins: ";
+lossesText.textContent = "Losses: ";
+guessesText.textContent = "Guesses Left: ";
+lettersText.textContent = "Letters Already Guessed: ";
 
 // select random letter from the listOfLetters
 var randomLetter = listOfLetters[Math.floor(Math.random() * listOfLetters.length)];
@@ -62,8 +72,6 @@ document.onkeyup = function (event) {
     }
 
     // update the HTML
-    gameTitle.textContent = "The Psychic Game";
-    gameInstructions.textContent = "Guess what letter I'm thinking of (and don't check the console!)";
     winsText.textContent = "Wins: " + winsCount;
     lossesText.textContent = "Losses: " + lossesCount;
     guessesText.textContent = "Guesses Left: " + guessesLeft;

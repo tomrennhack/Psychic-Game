@@ -8,19 +8,37 @@
     <title>Psychic Game - Tom</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        
+        body {
+            background-image: url('assets/images/bluesmoke.jpg');
+            background-size: 100%;
+        }
+
+        .html-view {
+            margin: 30px;
+            color: rgb(80, 0, 80);
+            text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+        }
+    </style>
 </head>
 
-<body style="margin: 30px;">
+<body>
 
-    <div id="html-printout">
+    <div id="html-printout" class="html-view">
         <h1 id="game-title"></h1>
         <hr>
-        <h4 id="game-instructions"></h4>
+        <h3 id="game-instructions"></h3>
+        <h4 id="press-any-key"></h4>
         <br>
-        <h4 id="wins-text"></h4>
-        <h4 id="losses-text"></h4>
-        <h4 id="guesses-text"></h4>
-        <h4 id="letters-text"></h4>
+        <h3 id="wins-text"></h3>
+        <h3 id="losses-text"></h3>
+        <h3 id="guesses-text"></h3>
+        <h3 id="letters-text"></h3>
     </div>
 
     <script src="assets/javascript/game.js">
